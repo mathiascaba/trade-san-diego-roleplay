@@ -252,18 +252,30 @@ a { color: inherit; text-decoration: none; }
 .card .name { font-size: 1.05rem; font-weight: 700; }
 .card .type { color: var(--muted); font-size: 0.85rem; }
 
-.gold-price {
+.buy-price.main {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: linear-gradient(135deg, rgba(245,197,66,0.16), rgba(245,197,66,0.05));
-  border: 1px solid rgba(245,197,66,0.5);
-  padding: 0.5rem 0.8rem;
+  flex-direction: column;
+  gap: 0.1rem;
+  margin-top: auto;
+  background: var(--bg2);
+  border: 1px solid var(--border);
   border-radius: 10px;
+  padding: 0.6rem 0.8rem;
+  text-align: center;
 }
-.gold-price .gicon { font-size: 1.1rem; }
-.gold-price .label { font-size: 0.75rem; color: var(--gold); text-transform: uppercase; letter-spacing: 0.5px; }
-.gold-price .value { font-size: 1.3rem; font-weight: 800; color: var(--gold); margin-left: auto; }
+.buy-price.main .label {
+  font-size: 0.72rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.buy-price.main .value {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+.buy-price.main.cash .value { color: #7ee787; }
+.buy-price.main.robux .value { color: var(--gold); }
+.buy-price.main.free .value { color: #58a6ff; }
 
 .stats {
   display: grid;
@@ -279,17 +291,6 @@ a { color: inherit; text-decoration: none; }
 }
 .stat-box .k { color: var(--muted); font-size: 0.7rem; text-transform: uppercase; }
 .stat-box .v { font-weight: 700; }
-
-.buy-price {
-  margin-top: auto;
-  font-size: 0.85rem;
-  color: var(--muted);
-  background: var(--bg2);
-  border-radius: 8px;
-  padding: 0.45rem 0.6rem;
-  text-align: center;
-}
-.buy-price b { color: var(--text); }
 
 /* ===== VACÍO ===== */
 .empty {

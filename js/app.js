@@ -62,9 +62,7 @@
       return true;
     });
 
-    if (state.sort === "gold-asc") list = [...list].sort((a, b) => a.gold - b.gold);
-    else if (state.sort === "gold-desc") list = [...list].sort((a, b) => b.gold - a.gold);
-    else if (state.sort === "speed") list = [...list].sort((a, b) => b.topSpeed - a.topSpeed);
+    if (state.sort === "speed") list = [...list].sort((a, b) => b.topSpeed - a.topSpeed);
     else if (state.sort === "accel")
       list = [...list].sort((a, b) => {
         const ga = parseFloat(a.accel); const gb = parseFloat(b.accel);
@@ -80,13 +78,17 @@
       return;
     }
 
+    function buyValue(v) {
+      if (v.category === "robux") return { big: v.robux + " Robux", label: "Precio (Robux)", cls: "robux" };
+      if (v.priceCash === 0) return { big: v.priceLabel || "Gratis", label: "Precio", cls: "free" };
+      return { big: money(v.priceCash), label: "Precio ($)", cls: "cash" };
+    }
+
     const frag = document.createDocumentFragment();
     for (const v of list) {
       const isRobux = v.category === "robux";
-      const buyLabel = isRobux ? `Compra: ${v.robux} Robux`
-                      : v.priceCash === 0 ? (v.priceLabel || "Gratis")
-                      : `Compra: ${money(v.priceCash)}`;
       const rarityColor = RARITY_COLORS[v.rarity] || "#9aa5b1";
+      const pv = buyValue(v);
 
       const card = document.createElement("div");
       card.className = "card";
@@ -105,16 +107,14 @@
             <div class="name">${v.name}</div>
             <div class="type">${v.type} · ${v.topSpeed} mph</div>
           </div>
-          <div class="gold-price">
-            <span class="gicon">🪙</span>
-            <span class="label">Precio trading</span>
-            <span class="value">${v.gold.toLocaleString("en-US")}</span>
+          <div class="buy-price main ${pv.cls}">
+            <span class="label">${pv.label}</span>
+            <span class="value">${pv.big}</span>
           </div>
           <div class="stats">
             <div class="stat-box"><div class="k">Vel. máx</div><div class="v">${v.topSpeed} mph</div></div>
             <div class="stat-box"><div class="k">0–60</div><div class="v">${v.accel}</div></div>
           </div>
-          <div class="buy-price">${buyLabel}</div>
         </div>`;
 
       loadImage(v, card.querySelector("img"), card.querySelector(".ph"));
