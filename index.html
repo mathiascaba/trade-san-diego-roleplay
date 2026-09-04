@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>San Diego Border Roleplay · Mercado de Vehículos</title>
+  <meta name="description" content="Todos los vehículos disponibles para tradear en San Diego Border Roleplay de Roblox, con sus precios en lingotes de oro (Gold Bars).">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪙</text></svg>">
+</head>
+<body>
+
+  <header class="hero">
+    <img class="hero-bg" src="img/hero.webp" alt="San Diego Border Roleplay">
+    <div class="overlay">
+      <h1>Marketplace <span class="gold">SDBR</span></h1>
+      <p>Vehículos disponibles para tradear en <b>San Diego Border Roleplay</b></p>
+      <span class="badge">Precios en 🪙 Lingotes de Oro (Gold Bars)</span>
+    </div>
+  </header>
+
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="search-box">
+        <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 1 0-.7.7l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0A4.5 4.5 0 1 1 14 9.5 4.5 4.5 0 0 1 9.5 14z"/></svg>
+        <input id="search" type="text" placeholder="Buscar vehículo…">
+      </div>
+
+      <button class="btn active" data-cat="all">Todos</button>
+      <button class="btn" data-cat="civil">Civiles</button>
+      <button class="btn" data-cat="robux">Robux</button>
+
+      <div class="select-wrap">
+        <select id="typeSel"></select>
+      </div>
+      <div class="select-wrap">
+        <select id="raritySel"></select>
+      </div>
+      <div class="select-wrap">
+        <select id="sortSel">
+          <option value="default">Ordenar</option>
+          <option value="gold-asc">Precio Gold ↑</option>
+          <option value="gold-desc">Precio Gold ↓</option>
+          <option value="speed">Velocidad máx</option>
+          <option value="accel">Aceleración 0–60</option>
+        </select>
+      </div>
+
+      <span class="count" id="count"></span>
+    </div>
+  </div>
+
+  <main class="container">
+    <h2 class="section-title">Catálogo de vehículos</h2>
+    <div class="grid" id="grid"></div>
+  </main>
+
+  <footer>
+    <p>Catálogo no oficial · San Diego Border Roleplay (Roblox)</p>
+    <p class="tip">
+      💡 Para añadir la foto de un vehículo, guarda su imagen en la carpeta <code>img/</code> con el nombre indicado en cada tarjeta
+      (p. ej. <code>img/fugatti-divino.jpg</code>). La imagen aparecerá automáticamente. Formatos admitidos: jpg, png, webp.
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

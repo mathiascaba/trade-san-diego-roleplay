@@ -1,0 +1,7 @@
+# Sistema / editor
+Thumbs.db
+Desktop.ini
+*.log
+
+# No subir notas locales
+notas*.txt
