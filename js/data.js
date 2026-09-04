@@ -1,6 +1,5 @@
 const VEHICLES = [
   // ============ CIVILES (compra con cash del juego) ============
-  { name: "Tayora Cambria", slug: "tayora-cambria", category: "civil", type: "Muscle", priceCash: 0, priceLabel: "Gratis", gold: 50, topSpeed: 128, accel: "8.6s", rarity: "Común" },
   { name: "Citrion Buddy", slug: "citrion-buddy", category: "civil", type: "Compacto", priceCash: 1000, gold: 90, topSpeed: 38, accel: "—", rarity: "Común" },
   { name: "Nissari Versia", slug: "nissari-versia", category: "civil", type: "Sedán", priceCash: 2000, gold: 150, topSpeed: 108, accel: "10.2s", rarity: "Común" },
   { name: "Tayora Royal Touring", slug: "tayora-royal-touring", category: "civil", type: "Sedán", priceCash: 7500, gold: 250, topSpeed: 140, accel: "7.5s", rarity: "Común" },
@@ -8,11 +7,9 @@ const VEHICLES = [
   { name: "Mammoth Patriot", slug: "mammoth-patriot", category: "civil", type: "SUV", priceCash: 10000, gold: 300, topSpeed: 115, accel: "6.7s", rarity: "Común" },
   { name: "Chevran Silverline", slug: "chevran-silverline", category: "civil", type: "Sedán", priceCash: 10500, gold: 320, topSpeed: 132, accel: "6.8s", rarity: "Común" },
   { name: "Bracken Trailmaster 150", slug: "bracken-trailmaster-150", category: "civil", type: "Pickup", priceCash: 12500, gold: 350, topSpeed: 112, accel: "6.9s", rarity: "Común" },
-  { name: "Chevran Courier", slug: "chevran-courier", category: "civil", type: "Camioneta", priceCash: 12500, gold: 350, topSpeed: 129, accel: "6.6s", rarity: "Común" },
   { name: "Hondo CR250X", slug: "hondo-cr250x", category: "civil", type: "Moto", priceCash: 15000, gold: 400, topSpeed: 80, accel: "3.2s", rarity: "Común" },
   { name: "Chevran Silverline HD", slug: "chevran-silverline-hd", category: "civil", type: "Sedán", priceCash: 16000, gold: 450, topSpeed: 120, accel: "9.0s", rarity: "Común" },
   { name: "Beamer M135X", slug: "beamer-m135x", category: "civil", type: "Deportivo", priceCash: 20000, gold: 550, topSpeed: 155, accel: "4.7s", rarity: "Común" },
-  { name: "Mammoth Trailrunner", slug: "mammoth-trailrunner", category: "civil", type: "SUV", priceCash: 27500, gold: 700, topSpeed: 129, accel: "7.1s", rarity: "Común" },
   { name: "Beamer E30R", slug: "beamer-e30r", category: "civil", type: "Deportivo", priceCash: 30000, gold: 750, topSpeed: 146, accel: "6.6s", rarity: "Común" },
   { name: "Auvio R3S", slug: "auvio-r3s", category: "civil", type: "Deportivo", priceCash: 35000, gold: 850, topSpeed: 155, accel: "3.9s", rarity: "Común" },
   { name: "Dager Defiant", slug: "dager-defiant", category: "civil", type: "Muscle", priceCash: 70000, gold: 1500, topSpeed: 170, accel: "5.0s", rarity: "Raro" },
@@ -36,13 +33,8 @@ const VEHICLES = [
 
   // ============ ROBUX (se compran con Robux) ============
   { name: "Transline Metro 40", slug: "transline-metro-40", category: "robux", type: "Minivan", robux: 499, gold: 950, topSpeed: 63, accel: "4.1s", rarity: "Raro" },
-  { name: "Lambro Uros", slug: "lambro-uros", category: "robux", type: "SUV", robux: 599, gold: 1100, topSpeed: 190, accel: "3.6s", rarity: "Épico" },
   { name: "Veylan Apex", slug: "veylan-apex", category: "robux", type: "Hypercar", robux: 599, gold: 1100, topSpeed: 212, accel: "2.3s", rarity: "Legendario" },
-  { name: "Royalle Daybreak", slug: "royalle-daybreak", category: "robux", type: "Sedán", robux: 599, gold: 1100, topSpeed: 152, accel: "3.5s", rarity: "Épico" },
-  { name: "Aegis Cashmaster (Blindado)", slug: "aegis-cashmaster", category: "robux", type: "Blindado", robux: 639, gold: 1200, topSpeed: 150, accel: "5.9s", rarity: "Épico" },
   { name: "Valenza Strada 70", slug: "valenza-strada-70", category: "robux", type: "Hypercar", robux: 699, gold: 1300, topSpeed: 205, accel: "2.8s", rarity: "Legendario" },
-  { name: "Voltera Cyberhauler", slug: "voltera-cyberhauler", category: "robux", type: "Pickup", robux: 999, gold: 1800, topSpeed: 130, accel: "3.0s", rarity: "Épico" },
-  { name: "Voltera Roadster X", slug: "voltera-roadster-x", category: "robux", type: "Superdeportivo", robux: 999, gold: 1800, topSpeed: 200, accel: "2.0s", rarity: "Legendario" },
 ];
 
 const RARITY_COLORS = {
